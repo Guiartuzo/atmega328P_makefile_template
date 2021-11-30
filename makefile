@@ -1,5 +1,4 @@
 FILENAME=main
-FILENAME2=atmega328P_LCD
 PORT=COM7
 PROGRAMMER=arduino
 BAUD=115200
@@ -11,8 +10,7 @@ default:compile upload clean
 
 compile:
 	$(COMPILE) -c $(FILENAME).c -o $(FILENAME).o
-	$(COMPILE) -c $(FILENAME2).c -o $(FILENAME2).o 
-	$(COMPILE) -o $(FILENAME).elf $(FILENAME).o $(FILENAME2).o
+	$(COMPILE) -o $(FILENAME).elf $(FILENAME).o
 
 	avr-objcopy -j .text -j .data -O ihex $(FILENAME).elf $(FILENAME).hex
 
