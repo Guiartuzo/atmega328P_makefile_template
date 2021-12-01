@@ -19,6 +19,5 @@ upload:
 
 clean:
 	rm $(FILENAME).o
-	rm $(FILENAME2).o
 	rm $(FILENAME).elf
 	rm $(FILENAME).hex
